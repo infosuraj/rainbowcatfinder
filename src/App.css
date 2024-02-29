@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #CDFADB;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title{
+    font-family: "Showcard Gothic", sans-serif;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    font-size: 5em;
+    color: #FF8080;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bounce-top{
+    animation: bounce-top 0.9s both;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
 }
